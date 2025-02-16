@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anish Sathawar | Portfolio</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="logo">ANISH SATHAWAR</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h2>Elegance in Simplicity</h2>
+        <p>Minimal. Timeless. Innovative.</p>
+    </section>
+    
+    <section id="about" class="content">
+        <h2>About Me</h2>
+        <p>Driven and ambitious, I am eager to apply my academic knowledge in a practical setting. Known for my strong work ethic and quick learning ability, I excel in collaborative environments and consistently deliver high-quality results.</p>
+    </section>
+    
+    <section id="education" class="content">
+        <h2>Education</h2>
+        <p><strong>Georgian College @ ILAC | Toronto, ON</strong></p>
+        <p>Diploma in Computer Programming | Graduated: Dec 2024</p>
+        <p>GPA: 3.9/4.0 | Dean’s List (Summer 2023, Fall 2023)</p>
+    </section>
+    
+    <section id="skills" class="content">
+        <h2>Technology Proficiencies</h2>
+        <p>Java, Python, C++, C#, HTML, CSS, JavaScript, ASP.NET, Unity, Docker, GitHub</p>
+    </section>
+    
+    <section id="projects" class="content">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card" onclick="showProject('Network Gear Configuration Project')">Network Gear Configuration Project</div>
+            <div class="project-card" onclick="showProject('Chaotic Kitchen Trial Game')">Chaotic Kitchen Trial Game</div>
+            <div class="project-card" onclick="showProject('Local Docker ASP.NET Test Application')">Local Docker ASP.NET Test Application</div>
+            <div class="project-card" onclick="showProject('Dynamic Web Development Project')">Dynamic Web Development Project</div>
+        </div>
+    </section>
+    
+    <section id="resume" class="content">
+        <h2>Resume</h2>
+        <p>Download my full resume and transcript:</p>
+        <ul>
+            <li><a href="path/to/resume.pdf" target="_blank">Resume (PDF)</a></li>
+            <li><a href="path/to/transcript.pdf" target="_blank">Transcript (PDF)</a></li>
+        </ul>
+    </section>
+    
+    <section id="contact" class="content">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:anishsathawara2774@gmail.com">anishsathawara2774@gmail.com</a></p>
+        <p>Phone: 416-839-5936</p>
+        <p>Location: Richmond Hill, ON, L4S2H4</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Anish Sathawar</p>
+    </footer>
+
+    <div id="projectDetail" class="project-detail hidden" onclick="closeProject()">
+        <div id="projectContent"></div>
+    </div>
+
+    <script>
+        function showProject(title) {
+            let projectDetails = '';
+
+            if (title === 'Network Gear Configuration Project') {
+                projectDetails = `
+                    <h2>Network Gear Configuration Project</h2>
+                    <p><strong>Description:</strong> Designed and implemented a robust network infrastructure using Cisco switches and routers. This project focused on configuring, troubleshooting, and optimizing network devices, ensuring efficient data flow and network security.</p>
+                    <p><strong>Key Achievements:</strong></p>
+                    <ul>
+                        <li><strong>Network Design:</strong> Developed a comprehensive network architecture involving VLANs, static routing, and dynamic routing protocols (OSPF, EIGRP).</li>
+                        <li><strong>Switch Configuration:</strong> Configured Layer 2 switches, setting up VLANs, trunking, and port security for enhanced segmentation and network management.</li>
+                        <li><strong>Router Configuration:</strong> Configured routers for dynamic routing protocols like OSPF and EIGRP, ensuring proper route propagation and failover mechanisms.</li>
+                        <li><strong>Security Measures:</strong> Implemented basic security measures such as access control lists (ACLs) to regulate traffic between networks and secure critical segments.</li>
+                        <li><strong>Troubleshooting:</strong> Diagnosed and resolved network issues using tools such as Ping, Traceroute, and Cisco's diagnostic commands, ensuring optimal network performance.</li>
+                        <li><strong>Packet Tracer Proficiency:</strong> Utilized Cisco Packet Tracer to simulate real-world network environments, ensuring accurate configuration and testing.</li>
+                    </ul>
+                `;
+            } else if (title === 'Chaotic Kitchen Trial Game') {
+                projectDetails = `
+                    <h2>Chaotic Kitchen Trial Game</h2>
+                    <p><strong>Description:</strong> Designed and implemented a dynamic and engaging game using the Unity Engine, showcasing strong proficiency in C++ scripting and utilizing specialized Unity libraries for game development. The project serves as a testament to my skills in creating interactive and entertaining gaming experiences.</p>
+                    <p><strong>Key Achievements:</strong></p>
+                    <ul>
+                        <li><strong>Game Concept and Design:</strong> Conceptualized and designed the game, focusing on creating a chaotic kitchen environment with interactive elements, challenges, and an engaging user experience.</li>
+                        <li><strong>C++ Scripting Mastery:</strong> Developed custom scripts for asset creation, game mechanics, and player interactions.</li>
+                        <li><strong>Unity Engine Integration:</strong> Successfully integrated specialized Unity libraries to enhance game development, ensuring smooth gameplay and optimizing performance.</li>
+                        <li><strong>Asset Creation:</strong> Implemented robust asset creation scripts in C++, demonstrating the ability to generate and manipulate in-game assets dynamically.</li>
+                        <li><strong>Visual Studio Code Proficiency:</strong> Utilized Visual Studio Code as the primary development environment, showcasing proficiency in coding, debugging, and optimizing code for a seamless development process.</li>
+                    </ul>
+                `;
+            } else if (title === 'Local Docker ASP.NET Test Application') {
+                projectDetails = `
+                    <h2>Local Docker ASP.NET Test Application</h2>
+                    <p><strong>Description:</strong> Designed, developed, and deployed a robust test project using the ASP.NET framework in the Visual Studio integrated development environment. Implemented containerization using Docker for seamless local deployment, showcasing proficiency in modern software development practices.</p>
+                    <p><strong>Key Achievements:</strong></p>
+                    <ul>
+                        <li><strong>Technology Stack:</strong> Leveraged the ASP.NET framework to architect a scalable and maintainable web application. Utilized Visual Studio as the primary IDE for efficient development and debugging.</li>
+                        <li><strong>Containerization with Docker:</strong> Implemented Docker to containerize the application, enabling consistent and isolated deployment environments. Configured Docker Compose for orchestrating multiple containers, streamlining the local development and testing process.</li>
+                        <li><strong>Deployment:</strong> Successfully published the ASP.NET application locally using Docker, showcasing deployment skills.</li>
+                    </ul>
+                `;
+            } else if (title === 'Dynamic Web Development Project') {
+                projectDetails = `
+                    <h2>Dynamic Web Development Project</h2>
+                    <p><strong>Description:</strong> Designed and implemented a versatile web development project, showcasing proficiency in HTML, CSS, and JavaScript. The project focuses on creating dynamic web pages accessible across various platforms and screen dimensions, with interactive elements for an enhanced user experience.</p>
+                    <p><strong>Key Achievements:</strong></p>
+                    <ul>
+                        <li><strong>Responsive Design:</strong> Developed responsive web pages that adapt seamlessly to different screen sizes and resolutions, ensuring a consistent and user-friendly experience across various devices.</li>
+                        <li><strong>Cross-Platform Compatibility:</strong> Ensured cross-platform compatibility, allowing users to access web pages on a wide range of devices, including desktops, tablets, and smartphones.</li>
+                        <li><strong>Touch Interaction Integration:</strong> Implemented touch interaction features using JavaScript to enhance user engagement.</li>
+                        <li><strong>CSS Styling Expertise:</strong> Utilized advanced CSS styling techniques to create visually appealing and modern designs.</li>
+                        <li><strong>JavaScript Functionality:</strong> Leveraged JavaScript to add dynamic functionality to the web pages, including real-time updates, form validations, and interactive elements.</li>
+                        <li><strong>User Experience Optimization:</strong> Prioritized user experience by incorporating intuitive navigation, clear layout structures, and seamless interactions, resulting in a user-friendly and enjoyable browsing experience.</li>
+                    </ul>
+                `;
+            }
+
+            document.getElementById("projectContent").innerHTML = projectDetails;
+            document.getElementById("projectDetail").classList.add("active");
+        }
+
+        function closeProject() {
+            document.getElementById("projectDetail").classList.remove("active");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+:root {
+    --primary-color: #1e3a8a;
+    --secondary-color: #9333ea;
+    --accent-color: #facc15;
+    --background-color: #0f172a;
+    --text-color: #e2e8f0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: var(--primary-color);
+    color: white;
+}
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: var(--secondary-color);
+}
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 50px;
+    border-bottom: 5px solid var(--accent-color);
+}
+.content {
+    padding: 50px 20px;
+}
+.project-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.project-card {
+    background: var(--secondary-color);
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+    width: 300px;
+    color: white;
+}
+.project-card:hover {
+    transform: scale(1.05);
+    background: var(--accent-color);
+    color: black;
+}
+.hidden {
+    display: none;
+}
+.project-detail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+.project-detail.active {
+    opacity: 1;
+    pointer-events: all;
+}
+footer {
+    background: var(--primary-color);
+    padding: 20px;
+    color: white;
+    margin-top: 30px;
+}
